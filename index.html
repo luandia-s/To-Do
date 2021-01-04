@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/todoList.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;700&family=Oswald:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet">
+    <title>Todo List | Task Organizer</title>
+</head>
+
+<body>
+    <header>
+        <div class="dates">
+            <div class="date">
+                <span class="day" id="day"></span>
+                <div class="year">
+                    <span class="month" id="month"></span>
+                    <span class="year" id="year"></span>
+                </div>
+            </div>
+            <div class="day-week">
+                <span id="day-week"></span>
+            </div>
+        </div>
+    </header>
+    <!-- <div class="modal-task">
+        <div class="modal-content">
+            <div class="header-modal">
+                <h2>New TodoList</h2>
+                <span>x</span>
+            </div>
+            <div class="body-task">
+                <label for="">title:</label>
+                <input type="text" placeholder="Enter the activity of task">
+                <label for="">description:</label>
+                <textarea rows="10" placeholder="Enter the description of task"></textarea>
+                <button>add</button>
+            </div>
+        </div>
+    </div> -->
+    <div class="container">
+        <div class="box">
+            <h2 class="title">Tasks:</h2>
+        </div>
+        <div class="tasks" id="tasks">
+            <div class="task">
+                <h3 class="task-title">Criar Projeto</h3>
+                <div class="task-description">
+                    Projeto para praticar conteúdos estudados
+                </div>
+                <span class="close">X</span>
+            </div>
+        </div>
+        <div class="add-task">
+            <button class="btn">New Task</button>
+        </div>
+    </div>
+
+    <script src="scripts/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,287 @@
+header {
+    width           : 100vw;
+    height          : 30vh;
+    background-color: #333A5E;
+
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+}
+
+.dates {
+    width          : 100%;
+    display        : flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+}
+
+.date {
+    display    : flex;
+    align-items: center;
+}
+
+.day {
+    font-family: 'Oswald', sans-serif;
+    font-size  : 5rem;
+    font-weight: bold;
+    color      : #e6ee73;
+
+    margin: 5px;
+}
+
+.month {
+    display    : block;
+    font-family: 'Oswald', sans-serif;
+    font-size  : 1.5rem;
+    font-weight: medium;
+    color      : #ffffff;
+
+    margin: 5px;
+}
+
+.year {
+    font-family: 'Oswald', sans-serif;
+    font-size  : 1.5rem;
+    font-weight: medium;
+    color      : #ffffff;
+
+    margin: 5px;
+}
+
+.day-week {
+
+    display       : flex;
+    flex-direction: column-reverse;
+
+    font-family   : 'Oswald', sans-serif;
+    letter-spacing: .8px;
+    font-size     : 1.1rem;
+    color         : #ffffff;
+
+    margin: 5px;
+}
+
+.container {
+
+    width             : 100vw;
+    height            : 73vh;
+    display           : flex;
+    flex-direction    : column;
+    align-items       : center;
+    justify-content: center;
+
+    border-radius: 25px;
+    margin-top: -25px;
+
+    background-color: #EDEDED;
+}
+
+.box {
+    display: flex;
+    width: 414px;
+}
+
+.title {
+    margin-top: 10px;
+    margin-left: 40px;
+    font-family: 'Oswald', sans-serif;
+    color      : #313134;
+}
+
+.tasks {
+    width             : 90%;
+    height            : 70%;
+    display           : flex;
+    flex-direction    : column;
+    align-items       : center;
+    /* justify-content: center; */
+    overflow          : auto;
+    padding           : 15px;
+    margin            : 10px;
+}
+
+.task {
+    position: relative;
+
+    display: block;
+
+    width     : 320px;
+    min-height: 100px;
+
+    background-color: #ffffff;
+
+    margin : 8px;
+    padding: 15px;
+
+    border-left  : rgb(127, 255, 133) 8px solid;
+    box-shadow   : 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.task-title {
+    font-family   : 'Oswald', sans-serif;
+    font-weight   : 500;
+    letter-spacing: .5px;
+    font-size     : 1rem;
+    color         : #313134;
+}
+
+.task-description {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size  : 1.1rem;
+}
+
+.close {
+    position: absolute;
+
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+
+    width : 15px;
+    height: 15px;
+
+    top  : -10px;
+    right: -10px;
+
+    padding      : 15px;
+    border-radius: 50%;
+
+    background-color: #8B8585;
+    color           : #ffffff;
+
+    font-family: 'Darker Grotesque', sans-serif;
+}
+
+.add-task {
+
+    /* position: relative; */
+    width    : 100%;
+    /* height: 100px; */
+
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    float          : right;
+    color          : #ffffff;
+
+    font-weight: bold;
+}
+
+.btn {
+    width : 320px;
+    height: 55px;
+
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+
+    background-color: #5D7158;
+    color: #F1F1F1;
+
+    border: none;
+    outline: none;
+    border-radius: 10px;
+
+    margin: 20px;
+    font-family: "Oswald", sans-serif;
+    font-size: 1rem;
+    line-height: 27px;
+    letter-spacing: 0.05em;
+    text-align: center;
+
+}
+
+.modal-task {
+    width : 350px;
+    height: 60vh;
+
+    background-color: #a2aaad;
+}
+
+
+.header-modal {
+    position        : relative;
+    display         : flex;
+    align-items     : center;
+    width           : 100%;
+    height          : 80px;
+    background-color: #6ba7df;
+}
+
+.header-modal h2 {
+    font-family   : 'Oswald', sans-serif;
+    font-size     : 1.5rem;
+    font-weight   : bold;
+    color         : #ffffff;
+    letter-spacing: .7px;
+    margin        : 5px;
+}
+
+.header-modal span {
+    position       : absolute;
+    right          : 10px;
+    display        : flex;
+    justify-content: flex-end;
+    font-family    : 'Darker Grotesque', sans-serif;
+    font-size      : 1.5rem;
+    font-weight    : bold;
+    color          : #ffffff;
+
+    margin: 5px;
+}
+
+.body-task {
+
+    display       : flex;
+    flex-direction: column;
+    width         : 100%;
+    height        : 100%;
+
+    padding         : 15px;
+    background-color: #dfd5d5;
+}
+
+.body-task input {
+
+    width  : 310px;
+    height : 60px;
+    padding: 20px;
+    margin : 5px;
+
+    border       : none;
+    border-radius: 10px;
+    outline      : none;
+}
+
+.body-task textarea {
+    padding: 20px;
+    margin : 5px;
+
+    border       : none;
+    border-radius: 10px;
+    outline      : none;
+    resize       : none;
+}
+
+.body-task button {
+    width       : 310px;
+    height      : 60px;
+    padding     : 20px;
+    margin-top  : 15px;
+    margin-right: 5px;
+    margin-left : 5px;
+
+    border       : none;
+    border-radius: 10px;
+    outline      : none;
+
+    background-color: #84d18b;
+    color           : #ffffff;
+}
+
+.body-task label {
+    font-family   : 'Oswald', sans-serif;
+    font-size     : 1.2rem;
+    letter-spacing: 0.5px
+}
