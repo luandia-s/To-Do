@@ -1,6 +1,6 @@
 const date = new Date()
 const dates = new Array('domingo','segunda-feira','terça-feira','quarta-feira','quinta-feira','sexta','sábado')
-const months = new Array("Janeiro", "Fevereiro", "Março", "Abril",      "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro")
+const months = new Array("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro")
 
 document.getElementById("day").innerHTML = date.getDate() > 9 ? date.getDate() : '0' + date.getDate()
 document.getElementById("month").innerHTML = months[date.getMonth()]
@@ -14,8 +14,7 @@ console.log(date.getFullYear())
 const tasks = []
 
 const idGenerate = () => {
-    const id = Math.floor(Math.random() * (100 - 1) + 1)
-    console.log(id)
+    return Math.floor(Math.random() * (100 - 1) + 1)
 }
 
 function newTask() {
@@ -27,10 +26,10 @@ function newTask() {
         }
     }
     tasks.push(task)
-    creatTaskInHtml()
+    updateScreen()
 }
 
-const creatTaskInHtml = () => {
+const updateScreen = () => {
     let listTasks = document.getElementById('#tasks')
     tasks.forEach(item => {
         let task = document.createElement('div')
@@ -49,9 +48,17 @@ const creatTaskInHtml = () => {
         deleteTask.setAttribute('onclick', 'deleteTask(this)')
         deleteTask.innerHTML = 'x'
 
+        taskTitle.innerHTML = textTitleTask
+        taskDescription.innerHTML = textDescriptionTask
+
         task.appendChild(taskTitle)
         task.appendChild(taskDescription)
         task.appendChild(deleteTask)
         listTasks.appendChild(task)
     })
+}
+
+function deleteTask(element) {
+    tasks.filter(task => task.id != element.getAttribute('id-data'))
+    updateScreen()
 }
