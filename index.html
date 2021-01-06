@@ -30,36 +30,36 @@
             </div>
         </div>
     </header>
-    <!-- <div class="modal-task">
+    <div class="modal-task" id="modal">
         <div class="modal-content">
             <div class="header-modal">
                 <h2>New TodoList</h2>
-                <span>x</span>
+                <span id="close">X</span>
             </div>
             <div class="body-task">
                 <label for="">title:</label>
-                <input type="text" placeholder="Enter the activity of task">
+                <input type="text" id="titleTask" placeholder="Enter the activity of task">
                 <label for="">description:</label>
-                <textarea rows="10" placeholder="Enter the description of task"></textarea>
-                <button>add</button>
+                <textarea rows="10" id="descriptionTask" placeholder="Enter the description of task"></textarea>
+                <button onclick="newTask()">add task</button>
             </div>
         </div>
-    </div> -->
+    </div>
     <div class="container">
         <div class="box">
             <h2 class="title">Tasks:</h2>
         </div>
         <div class="tasks" id="tasks">
-            <div class="task">
+            <!-- <div class="task" id="task">
                 <h3 class="task-title">Criar Projeto</h3>
                 <div class="task-description">
                     Projeto para praticar conteúdos estudados
                 </div>
-                <span class="close">X</span>
-            </div>
+                <button class="close" onclick="deleteTask(this)">X</button>
+            </div> -->
         </div>
         <div class="add-task">
-            <button class="btn">New Task</button>
+            <button class="btn" id="open-modal">New Task</button>
         </div>
     </div>
 
